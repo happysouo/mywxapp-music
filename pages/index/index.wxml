@@ -1,0 +1,175 @@
+<view class="index-container">
+  <!-- 轮播图 -->
+  <view class="index-banner">
+    <swiper class="banner" 	indicator-dots 	indicator-active-color="#d43c33" 	circular>
+      <swiper-item class="banner-item" wx:for="{{bannerList}}" wx:key="url">
+        <image src="{{item.pic}}" mode=""/>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 导航栏 -->
+  <view class="index-nav">
+    <view class="nav-item">
+      <text class="iconfont icon-meirituijian"></text>
+      <text class="nav-text">每日推荐</text>
+    </view>
+    <view class="nav-item">
+      <text class="iconfont icon-gedan1"></text>
+      <text class="nav-text">歌单</text>
+    </view>
+    <view class="nav-item">
+      <text class="iconfont icon-paihangbang"></text>
+      <text class="nav-text">排行榜</text>
+    </view>
+    <view class="nav-item">
+      <text class="iconfont icon-diantai"></text>
+      <text class="nav-text">电台</text>
+    </view>
+    <view class="nav-item">
+      <text class="iconfont icon-zhiboguankanliangbofangsheyingshexiangjixianxing"></text>
+      <text class="nav-text">直播</text>
+    </view>
+  </view>
+  <!-- 推荐歌曲 -->
+  <!-- <view class="mod recommend">
+    <view class="title">
+      <text>推荐歌曲</text>
+    </view>
+    <view class="inner">
+      <text>为你精心推荐</text>
+      <text class="lookmore">查看更多</text>
+    </view>
+    <scroll-view class="recommend-img" 	scroll-x 	enable-flex>
+      <view class="item">
+        <image src="../../static/images/scout.jpg" mode=""/>
+        <text>33333哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈333311111111111222222222</text>
+      </view>
+      <view class="item">
+        <image src="../../static/images/scout.jpg" mode=""/>
+        <text>xxxx</text>
+      </view>
+      <view class="item">
+        <image src="../../static/images/scout.jpg" mode=""/>
+        <text>xxxx</text>
+      </view>
+      <view class="item">
+        <image src="../../static/images/scout.jpg" mode=""/>
+        <text>xxxxxxx</text>
+      </view>
+      <view class="item">
+        <image src="../../static/images/scout.jpg" mode=""/>
+        <text>xxxxxxx</text>
+      </view>
+      <view class="item">
+        <image src="../../static/images/scout.jpg" mode=""/>
+        <text>xxxxxxx</text>
+      </view>
+    </scroll-view>
+
+  </view> -->
+  <!-- 排行榜 -->
+  <!-- <view class="mod songup">
+    <view class="title">
+      <text>排行榜</text>
+    </view>
+    <view class="inner">
+      <text>热歌风向标</text>
+      <text class="lookmore">查看更多</text>
+    </view>
+    <view class="rank">
+      <swiper class="rank-list" circular>
+        <swiper-item class="rank-item"> 
+         <view class="title">原创</view>
+          <view class="item">
+            <image src="../../static/images/scout.jpg" mode=""/>
+            <text class="rank-index">0</text>
+            <text class="rank-name">啦啦啦</text>
+          </view>
+          <view class="item">
+            <image src="../../static/images/scout.jpg" mode=""/>
+            <text class="rank-index">0</text>
+            <text class="rank-name">啦啦啦</text>
+          </view>
+          <view class="item">
+            <image src="../../static/images/scout.jpg" mode=""/>
+            <text class="rank-index">0</text>
+            <text class="rank-name">啦啦啦</text>
+          </view>
+          <view class="item">
+            <image src="../../static/images/scout.jpg" mode=""/>
+            <text class="rank-index">0</text>
+            <text class="rank-name">啦啦啦</text>
+          </view>
+          <view class="item">
+            <image src="../../static/images/scout.jpg" mode=""/>
+            <text class="rank-index">0</text>
+            <text class="rank-name">啦啦啦</text>
+          </view>
+        </swiper-item>
+        <swiper-item class="rank-item"> 
+         <view class="title">原创</view>
+          <view class="item">
+            <image src="../../static/images/scout.jpg" mode=""/>
+            <text class="rank-index">0</text>
+            <text class="rank-name">啦啦啦</text>
+          </view>
+          <view class="item">
+            <image src="../../static/images/scout.jpg" mode=""/>
+            <text class="rank-index">0</text>
+            <text class="rank-name">啦啦啦</text>
+          </view>
+          <view class="item">
+            <image src="../../static/images/scout.jpg" mode=""/>
+            <text class="rank-index">0</text>
+            <text class="rank-name">啦啦啦</text>
+          </view>
+          <view class="item">
+            <image src="../../static/images/scout.jpg" mode=""/>
+            <text class="rank-index">0</text>
+            <text class="rank-name">啦啦啦</text>
+          </view>
+          <view class="item">
+            <image src="../../static/images/scout.jpg" mode=""/>
+            <text class="rank-index">0</text>
+            <text class="rank-name">啦啦啦</text>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view> -->
+
+  <!-- 推荐歌曲 使用组件-->
+  <Mod title="推荐歌曲" subTitle="为你精心推荐" class="recommend">
+  <!-- 在组件那边使用插槽 -->
+    <scroll-view class="recommend-img" 	scroll-x 	enable-flex>
+      <view class="item" wx:for="{{RecommendList}}" wx:key="picUrl">
+        <image src="{{item.picUrl}}" mode=""/>
+        <text>{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </Mod>
+  <!-- 排行榜 使用组件-->
+  <Mod title="排行榜" subTitle="热歌风向标" class="songup">
+    <view class="rank">
+      <swiper class="rank-list" circular>
+        <swiper-item class="rank-item" wx:for="{{songupList}}" wx:key="name"> 
+         <view class="title">{{item.name}}</view>
+          <view class="item" wx:for="{{item.privileges}}" wx:for-item="song" wx:key="name">
+            <image src="{{song.al.picUrl}}" mode=""/>
+            <text class="rank-index">{{index+1}}</text>
+            <text class="rank-name">{{song.name}}</text>
+          </view>
+        </swiper-item>
+
+      </swiper>
+    </view>
+  </Mod>
+
+
+
+
+
+
+
+
+</view>
