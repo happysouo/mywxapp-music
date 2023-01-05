@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/video/video",
+    "pages/user/user"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#d43c33",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "硅谷云音乐"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+      "selectedColor":"#d43c33",
+      "list": [{
+          "pagePath":"pages/index/index",
+          "text": "首页",
+          "iconPath": "./icons/index.png",
+          "selectedIconPath": "./icons/index_select.png"
+      },
+      {
+        "pagePath":"pages/video/video",
+        "text": "视频",
+        "iconPath": "./icons/video.png",
+        "selectedIconPath": "./icons/videl_select.png"
+    },
+    {
+        "pagePath": "pages/user/user",
+        "text": "个人中心",
+        "iconPath": "./icons/people.png",
+        "selectedIconPath": "./icons/people_select.png"
+    }
+    ]
+  }
+
+}

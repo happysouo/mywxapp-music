@@ -1,0 +1,23 @@
+/* 模块样式 */
+.mod{
+    margin-top: 35rpx;
+    padding: 0 20rpx;
+  }
+  .mod .title{
+     color: gray;
+     margin-bottom: 10rpx;
+  }
+  .mod .inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  .mod .inner .lookmore{
+    display: block;
+    font-size: 30rpx;
+    padding: 10rpx;
+    border-radius: 30rpx;
+    align-items: baseline;
+    text-align: center;
+    width: 140rpx;
+    border: 1px solid black;
+  }
