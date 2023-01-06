@@ -4,7 +4,7 @@
     </view>
     <view class="inner">
       <text>{{subTitle}}</text>
-      <text class="lookmore">查看更多</text>
+      <text class="lookmore" bindtap="tapMoreHandler">查看更多</text>
     </view> 
     <!-- 调用组件传入插槽占位 -->
     <slot></slot>

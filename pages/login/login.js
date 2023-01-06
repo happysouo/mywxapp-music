@@ -1,40 +1,11 @@
-// pages/user/user.js
-
-// 定义滑动的初始值
-let clientY='';
+// pages/login/login.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        translateY:'',
-        transition:"",
-    },
 
-    // 1.touch按下
-    touchstartHandler(e){
-        console.log(e);
-        clientY=e.touches[0].clientY;
-        this.setData({
-            transition:' '
-        })
-    },
-    // 2.touch移动
-    touchmoveHandler(e){
-         //移动距离=移动距离-初始距离
-         const moveY=e.touches[0].clientY-clientY;
-         this.setData({
-             translateY:moveY+'rpx'
-         })
-    },
-    // 3.touch放开
-    touchendHandler(){
-        // 复位+过渡效果
-        this.setData({
-            translateY:0,
-            transition:"transform 1s"
-        })
     },
 
     /**

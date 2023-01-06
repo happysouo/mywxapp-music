@@ -1,8 +1,10 @@
 {
+"entryPagePath":"pages/user/user",
   "pages": [
     "pages/index/index",
     "pages/video/video",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/login/login"
   ],
   "window": {
     "navigationBarBackgroundColor": "#d43c33",

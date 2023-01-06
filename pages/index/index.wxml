@@ -139,7 +139,7 @@
   </view> -->
 
   <!-- 推荐歌曲 使用组件-->
-  <Mod title="推荐歌曲" subTitle="为你精心推荐" class="recommend">
+  <Mod title="推荐歌曲" bindmyevent="recommendTap" subTitle="为你精心推荐" class="recommend">
   <!-- 在组件那边使用插槽 -->
     <scroll-view class="recommend-img" 	scroll-x 	enable-flex>
       <view class="item" wx:for="{{RecommendList}}" wx:key="picUrl">
@@ -149,7 +149,7 @@
     </scroll-view>
   </Mod>
   <!-- 排行榜 使用组件-->
-  <Mod title="排行榜" subTitle="热歌风向标" class="songup">
+  <Mod title="排行榜" bindmyevent="rankTap" subTitle="热歌风向标" class="songup">
     <view class="rank">
       <swiper class="rank-list" circular>
         <swiper-item class="rank-item" wx:for="{{songupList}}" wx:key="name"> 

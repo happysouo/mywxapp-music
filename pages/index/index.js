@@ -56,6 +56,16 @@ Page({
     }
   },
  
+  // 4.监听
+  recommendTap(e){
+    console.log('推荐歌曲',e);
+  },
+
+  // 5.监听
+  rankTap(e){
+    console.log('排行榜',e);
+  },
+
   // 初始化获取数据
   onLoad(){
     // 获取轮播图

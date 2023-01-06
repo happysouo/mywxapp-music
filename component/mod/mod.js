@@ -19,6 +19,9 @@ Component({
      * 组件的方法列表
      */
     methods: {
-
+        // 1.
+        tapMoreHandler(){
+           this.triggerEvent('myevent','aaa');
+        }
     }
 })
