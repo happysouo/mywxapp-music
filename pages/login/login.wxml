@@ -1,2 +1,24 @@
-<!--pages/login/login.wxml-->
-<text>pages/login/login.wxml</text>
+<view class="login-container">
+    <view class="top">
+        <view class="big">
+            LOGIN
+        </view>
+        <view class="small">
+            欢迎回来
+        </view>
+        <!-- 手机号--- -->
+        <view class="Elput">
+            <view id="phone" class="item">
+                <text>手机号</text>
+                <input type="text" placeholder="请输入手机号" />
+            </view>
+            <view id="password" class="item">
+                <text>密码</text>
+                <input type="text" placeholder="请输入密码" />
+            </view>
+            <view class="btn">登录</view>
+            <view class="forget"> 忘记密码？</view>
+        </view>
+    </view>
+
+</view>

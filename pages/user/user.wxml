@@ -6,7 +6,7 @@
             <image src="../../static/images/yu.jpg" mode="" />
         </view>
         <view class="user">
-            <image class="avater" src="../../static/images/scout.jpg" mode="" />
+            <image class="avater" src="../../static/images/scout.jpg" mode="" bindtap="loginHandler" />
             <text class="nickname">游客</text>
         </view>
         <!-- vip -->
