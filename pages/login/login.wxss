@@ -33,3 +33,16 @@
 text-align: center;
     color: #489cfc;
 }
+.register{
+    position: absolute;
+   font-size: 28rpx;
+    text-align: center;
+    left: 0;
+  bottom: 50rpx;
+  width: 100%;
+
+}
+.register text{
+    color: #489cfc;
+
+}
