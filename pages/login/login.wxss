@@ -1,1 +1,35 @@
-/* pages/login/login.wxss */
+.login-container{
+    height: 100%;
+    width: 100%;
+}
+
+.top{
+    padding: 20rpx 60rpx;
+}
+.top .big{
+    
+}
+.top .small{
+    
+}
+.top .Elput .item{
+    color: gray;
+    margin-top: 70rpx;
+    border-radius: 20rpx;
+    background-color: #f8f6fc;
+}
+.top .Elput .btn{
+    text-align: center;
+   background-color: #d43c33;
+   margin-top: 60rpx;
+   color: white;
+   border-radius: 30rpx;
+   padding: 18rpx 0;
+   font-size: 30rpx;
+}
+.top .Elput .forget{
+   margin-top: 40rpx;
+   font-size: 28rpx;
+text-align: center;
+    color: #489cfc;
+}

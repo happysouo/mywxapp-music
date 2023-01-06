@@ -37,6 +37,14 @@ Page({
         })
     },
 
+    // 4.点击头像跳转到登录页
+    loginHandler(){
+        console.log(1);
+        wx.navigateTo({
+          url: "/pages/login/login"
+        })
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */
