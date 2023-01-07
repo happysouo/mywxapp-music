@@ -6,8 +6,8 @@
             <image src="../../static/images/yu.jpg" mode="" />
         </view>
         <view class="user">
-            <image class="avater" src="../../static/images/scout.jpg" mode="" bindtap="loginHandler" />
-            <text class="nickname">游客</text>
+            <image class="avater" src="{{userInfo.avater}}" mode="" bindtap="loginHandler" />
+            <text class="nickname">{{userInfo.nickName}}</text>
         </view>
         <!-- vip -->
         <view class="vip">
@@ -53,21 +53,13 @@
             <!-- 最近播放 -->
             <view class="recently">
                 <text class="text">最近播放</text>
-                <scroll-view scroll-x enable-flex class="item-outer">
-                     <view class="item">
-                    <text>11</text>
-                    <image src="../../static/images/scout.jpg" mode=""/>
-                     </view>
-                     <view class="item">
-                    <text>11</text>
-                    <image src="../../static/images/scout.jpg" mode=""/>
-                     </view>
-                     <view class="item">
-                    <text>11</text>
-                    <image src="../../static/images/scout.jpg" mode=""/>
+                <scroll-view scroll-x enable-flex class="item-outer" wx:if="{{records.length>0}}">
+                     <view class="item" wx:for="{{records}}" wx:key="score">
+                    <text>{{item.song.al.name}}</text>
+                    <image src="{{item.song.al.picUrl}}" mode=""/>
                      </view>
                 </scroll-view>
-                <text>暂无记录</text>
+                <text class="norecord" wx:else>暂无记录</text>
             </view>
             <!-- 其他 -->
             <view class="music">

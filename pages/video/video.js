@@ -1,18 +1,56 @@
 // pages/video/video.js
+import { request } from "../../utils/request";
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        groupList:[],
+        itemId:'scroll58100',
+        videoList:[],
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad(options) {
+    // 1.获取视频页所有导航列表
+    async getGroupList(){
+        const res=await request({
+            url:'/video/group/list',
+        })
+        // 保存数据
+        this.setData({
+            groupList:res.data.data?.slice(0,10) || [],
+        })
+    },
 
+    // 2.点击切换视频导航
+    changeItem(e){
+        console.log(e,'nav');
+        this.setData({
+            itemId:e.currentTarget.id,
+        })
+        this.getVideoList();
+    },
+
+    // 3.获取视频列表
+    async getVideoList(){
+        const id= this.data.itemId.slice(6,11)
+        const res=await request({
+            url:'/video/group',
+            data: { id: id },
+        })
+        console.log(res,'vv');
+        this.setData({
+            videoList:res.data.datas,
+        })
+    },
+   
+    // 初始化获取数据
+    onLoad() {
+        // 1.
+        this.getGroupList();
+        // 2.
+        this.getVideoList();
     },
 
     /**

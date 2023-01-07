@@ -145,9 +145,13 @@
 }
 
 .nav .content .recently .text {
-    float: left;
+    /* float: left; */
     margin-top: 38rpx;
     margin-bottom: 24rpx;
+}.nav .content .recently .norecord{
+    display:block;
+    width: 200rpx;
+    height: 100rpx;
 }
 
 .nav .content .recently .item-outer {
@@ -164,8 +168,8 @@
 }
 
 .nav .content .recently .item-outer .item image {
-    width: 100%;
-    height: 100%;
+    width: 200rpx;
+    height: 200rpx;
     border-radius: 20rpx;
 }
 .nav .content .recently .item-outer .item text {

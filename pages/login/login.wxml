@@ -8,15 +8,15 @@
         </view>
         <!-- 手机号--- -->
         <view class="Elput">
-            <view id="phone" class="item">
+            <view  class="item">
                 <text>手机号</text>
-                <input type="text" placeholder="请输入手机号" />
+                <input id="phone" bindinput="inputHandler" type="text" placeholder="请输入手机号" />
             </view>
-            <view id="password" class="item">
+            <view  class="item">
                 <text>密码</text>
-                <input type="text" placeholder="请输入密码" />
+                <input id="password" bindinput="inputHandler" type="text" placeholder="请输入密码" />
             </view>
-            <view class="btn">登录</view>
+            <view class="btn" bindtap="login">登录</view>
             <view class="forget"> 忘记密码？</view>
         </view>
     </view>

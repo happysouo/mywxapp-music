@@ -1,5 +1,7 @@
 // pages/user/user.js
 
+import { request } from "../../utils/request";
+
 // 定义滑动的初始值
 let clientY='';
 Page({
@@ -10,6 +12,12 @@ Page({
     data: {
         translateY:'',
         transition:"",
+        // 用户信息
+        userInfo:{
+
+        },
+        // 播放记录
+        records:[],
     },
 
     // 1.touch按下
@@ -45,11 +53,35 @@ Page({
         })
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad(options) {
+    // 5.获取用户的播放记录
+    async getRecord(){
+        const res=await request({
+            url: '/user/record',
+            data: {
+                   uid: this.data.userInfo.userid,
+                   // type: 0 表示所有的播放记录，1 表示最近一周的播放记录
+                   type: 1
+            }
+        })
+        // 保存数据
+        this.setData({
+            records:res.data.weekData?.slice(0,10) || [],
+        })
+    },
 
+    //  初始化获取数据
+    onLoad() {
+        // 获取本地存储数据-用户信息
+        const userInfo=wx.getStorageSync('userinfo');
+        this.setData({
+            userInfo:{
+            userid:userInfo.userId,
+            avater:userInfo.avatarUrl,
+            nickName:userInfo.nickname,
+            }
+        })
+        // 调用获取播放记录
+        this.getRecord();
     },
 
     /**

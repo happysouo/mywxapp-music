@@ -1,11 +1,51 @@
 // pages/login/login.js
+import {request} from '../../utils/request';
+
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+        phone:'',
+        password:'',
+    },
 
+    // 1.收集用户的登录信息
+    inputHandler(e){
+        // 判断是手机号还是密码
+        const type=e.currentTarget.id;
+        this.setData({
+            [type]:e.detail.value,
+        })
+    },
+
+    // 2.点击登录
+   async login(){
+        // 成功则跳转到个人中心
+     const res=  await request({
+            url:'/login/cellphone',
+            data:{
+                phone:this.data.phone,
+                password:this.data.password,
+            }
+        })
+        // 本地缓存
+        wx.setStorageSync('userinfo',res.data.profile)
+        // 保存cookie
+        wx.setStorageSync('mycookie', res.data.cookie);
+        console.log(res.data.cookie,'res.data.cookie');
+        console.log(res,'res');
+        wx.showToast({
+          icon:'success',
+          title: '登录成功！',
+        })
+        setTimeout(()=>{
+            wx.reLaunch({
+          url: '/pages/user/user',
+        })
+        })
+        
     },
 
     /**
