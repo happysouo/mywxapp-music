@@ -8,6 +8,7 @@
         </view>
         <!-- 手机号--- -->
         <view class="Elput">
+<<<<<<< HEAD
             <view  class="item">
                 <text>手机号</text>
                 <input id="phone" bindinput="inputHandler" type="text" placeholder="请输入手机号" />
@@ -17,13 +18,27 @@
                 <input id="password" bindinput="inputHandler" type="text" placeholder="请输入密码" />
             </view>
             <view class="btn" bindtap="login">登录</view>
+=======
+            <view id="phone" class="item">
+                <text>手机号</text>
+                <input type="text" placeholder="请输入手机号" />
+            </view>
+            <view id="password" class="item">
+                <text>密码</text>
+                <input type="text" placeholder="请输入密码" />
+            </view>
+            <view class="btn">登录</view>
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
             <view class="forget"> 忘记密码？</view>
         </view>
     </view>
 
+<<<<<<< HEAD
 <view class="register">
     <view>
         还没有账号？<text>马上注册</text>
     </view>
 </view>
+=======
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
 </view>

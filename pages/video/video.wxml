@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <view class="videoContainer">
   <!-- 视频头部 -->
   <view class="header">
@@ -64,3 +65,7 @@
     </view>
   </scroll-view>
 </view>
+=======
+<!--pages/video/video.wxml-->
+<text>pages/video/video.wxml</text>
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc

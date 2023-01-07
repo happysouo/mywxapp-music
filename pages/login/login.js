@@ -1,12 +1,16 @@
 // pages/login/login.js
+<<<<<<< HEAD
 import {request} from '../../utils/request';
 
+=======
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+<<<<<<< HEAD
         phone:'',
         password:'',
     },
@@ -46,6 +50,9 @@ Page({
         })
         })
         
+=======
+
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
     },
 
     /**

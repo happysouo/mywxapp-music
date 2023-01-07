@@ -1,12 +1,16 @@
 // pages/video/video.js
+<<<<<<< HEAD
 import { request } from "../../utils/request";
 
+=======
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
+<<<<<<< HEAD
         groupList:[],
         itemId:'scroll58100',
         videoList:[],
@@ -51,6 +55,16 @@ Page({
         this.getGroupList();
         // 2.
         this.getVideoList();
+=======
+
+    },
+
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad(options) {
+
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
     },
 
     /**

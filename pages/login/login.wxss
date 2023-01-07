@@ -32,6 +32,7 @@
    font-size: 28rpx;
 text-align: center;
     color: #489cfc;
+<<<<<<< HEAD
 }
 .register{
     position: absolute;
@@ -45,4 +46,6 @@ text-align: center;
 .register text{
     color: #489cfc;
 
+=======
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
 }

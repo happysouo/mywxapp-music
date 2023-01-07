@@ -145,6 +145,7 @@
 }
 
 .nav .content .recently .text {
+<<<<<<< HEAD
     /* float: left; */
     margin-top: 38rpx;
     margin-bottom: 24rpx;
@@ -152,6 +153,11 @@
     display:block;
     width: 200rpx;
     height: 100rpx;
+=======
+    float: left;
+    margin-top: 38rpx;
+    margin-bottom: 24rpx;
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
 }
 
 .nav .content .recently .item-outer {
@@ -168,8 +174,13 @@
 }
 
 .nav .content .recently .item-outer .item image {
+<<<<<<< HEAD
     width: 200rpx;
     height: 200rpx;
+=======
+    width: 100%;
+    height: 100%;
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
     border-radius: 20rpx;
 }
 .nav .content .recently .item-outer .item text {

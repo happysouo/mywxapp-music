@@ -1,6 +1,10 @@
 {
+<<<<<<< HEAD
 
 "entryPagePath": "pages/video/video",
+=======
+"entryPagePath":"pages/login/login",
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
   "pages": [
     "pages/index/index",
     "pages/video/video",

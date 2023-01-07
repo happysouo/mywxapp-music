@@ -1,7 +1,10 @@
 // pages/user/user.js
 
+<<<<<<< HEAD
 import { request } from "../../utils/request";
 
+=======
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
 // 定义滑动的初始值
 let clientY='';
 Page({
@@ -12,12 +15,15 @@ Page({
     data: {
         translateY:'',
         transition:"",
+<<<<<<< HEAD
         // 用户信息
         userInfo:{
 
         },
         // 播放记录
         records:[],
+=======
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
     },
 
     // 1.touch按下
@@ -53,6 +59,7 @@ Page({
         })
     },
 
+<<<<<<< HEAD
     // 5.获取用户的播放记录
     async getRecord(){
         const res=await request({
@@ -82,6 +89,13 @@ Page({
         })
         // 调用获取播放记录
         this.getRecord();
+=======
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad(options) {
+
+>>>>>>> 07243908633d47632152e63fd43bde0ede651dcc
     },
 
     /**
